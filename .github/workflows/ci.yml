@@ -1,0 +1,22 @@
+name: CI/CD
+on:
+  push:
+    branches: [ master ]
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.TG_HOST }}
+        username: ${{ secrets.TG_USER }}
+        password: ${{ secrets.TG_PASS }}
+        script: |
+          cd Documents/frivolous/drip-flow-node/
+          git pull
+          export NODE_HOME=/usr/local/lib/nodejs/node-v12.18.1-linux-x64
+          export PATH=$PATH:$NODE_HOME/bin
+          npm install
+          npm run prod

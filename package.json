@@ -1,0 +1,71 @@
+{
+  "name": "drip-flow-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development nodemon -x",
+    "tsc": "tsc",
+    "reload": "pm2 reload pm2.json",
+    "prod": "npm run tsc && pm2 reload pm2.json",
+    "dev": "npm run tsc && pm2 reload pm2.dev.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tguzi/drip-flow-node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tguzi/drip-flow-node/issues"
+  },
+  "homepage": "https://github.com/tguzi/drip-flow-node#readme",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "cron": "^1.8.2",
+    "js-yaml": "^3.14.0",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.12.1",
+    "koa-body": "^4.2.0",
+    "koa-json": "^2.0.2",
+    "koa-jwt": "^4.0.0",
+    "koa-logger": "^3.2.1",
+    "koa-router": "^9.0.1",
+    "koa-static": "^5.0.0",
+    "koa2-cors": "^2.0.6",
+    "lodash": "^4.17.15",
+    "log4js": "^6.3.0",
+    "module-alias": "^2.2.2",
+    "moment": "^2.27.0",
+    "mysql2": "^2.1.0",
+    "pm2": "^4.4.0",
+    "qiniu": "^7.3.2",
+    "sequelize": "^5.21.13",
+    "swagger-jsdoc": "^4.0.0",
+    "uuid": "^8.2.0"
+  },
+  "devDependencies": {
+    "@types/bluebird": "^3.5.32",
+    "@types/cron": "^1.7.2",
+    "@types/js-yaml": "^3.12.4",
+    "@types/jsonwebtoken": "^8.5.0",
+    "@types/koa": "^2.11.3",
+    "@types/koa-json": "^2.0.18",
+    "@types/koa-logger": "^3.1.1",
+    "@types/koa-router": "^7.4.1",
+    "@types/koa-static": "^4.0.1",
+    "@types/koa2-cors": "^2.0.1",
+    "@types/lodash": "^4.14.155",
+    "@types/module-alias": "^2.0.0",
+    "@types/mysql": "^2.15.13",
+    "@types/node": "^14.0.13",
+    "@types/swagger-jsdoc": "^3.0.2",
+    "@types/swagger-tools": "^0.10.6",
+    "@types/uuid": "^8.0.0",
+    "@types/validator": "^13.0.0",
+    "cross-env": "^7.0.2",
+    "nodemon": "^2.0.4",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.5"
+  }
+}

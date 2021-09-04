@@ -1,0 +1,51 @@
+{
+  "compilerOptions": {
+    "sourceMap": false,
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "allowJs": true,
+    "noEmit": false,
+    "outDir": "./app",
+    "target": "es5",
+    "strict": true,
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "downlevelIteration": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./types"
+    ],
+    "lib": [
+      "es6",
+      "es7",
+      "es2018",
+      "es2019",
+      "esnext"
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "src/*": ["src/*"],
+      "abstract/*": ["src/abstract/*"],
+      "config/*": ["src/config/*"],
+      "controller/*": ["src/controller/*"],
+      "decorator/*": ["src/decorator/*"],
+      "interface/*": ["src/interface/*"],
+      "middleware/*": ["src/middleware/*"],
+      "models/*": ["src/models/*"],
+      "mysql/*": ["src/mysql/*"],
+      "utils/*": ["src/utils/*"],
+      "validation/*": ["src/validation/*"],
+      "types": ["src/types.d.ts"]
+    },
+  },
+  "include": [
+    "src",
+    "*.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "src/sql",
+    "app"
+  ]
+}

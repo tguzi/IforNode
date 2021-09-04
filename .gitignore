@@ -1,0 +1,12 @@
+.idea
+.vscode
+
+node_modules
+dist
+app
+logs
+zip
+
+yarn.lock
+yarn-error.log
+package-lock.json
